@@ -1,0 +1,26 @@
+# Personal Configuration (gitignored)
+
+This file is gitignored — it contains user-specific bindings that override
+project-level bindings in CLAUDE.md. Each user on the project creates their own.
+
+## Capability Binding Overrides
+
+These override project-level bindings in CLAUDE.md for this user only.
+
+### messaging
+Prefer Slack DM over Telegram for this project:
+- **blocking:** `mcp__slack__post_message(channel: "D12345", text: <message>)` — DM to self
+- **info:** print to terminal (don't interrupt for status updates)
+
+### session-logging
+Use file-based logging instead of the project's session-logging MCP server:
+- **tool:** Append to `tmp/session-log.md` using the Write tool
+- **format:** `[YYYY-MM-DD HH:MM] [CATEGORY] Description`
+
+## Browser Testing Credentials
+- **login:** admin@example.com / devpassword123
+
+## Autonomy Preferences
+- Don't ask before sending notifications — just send them
+- Use `blocking` messaging only when genuinely blocked on a decision
+- Use `info` messaging for all status updates

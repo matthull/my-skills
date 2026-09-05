@@ -1,0 +1,17 @@
+graph TD
+    subgraph spec["Living Spec Cycle"]
+        A["New / Updated<br/>Product Requirements<br/>(PRD, transcripts, Slack, etc.)"] -->|"LLM signal extraction"| B["Technical Spec<br/>(living document)"]
+    end
+
+    subgraph impl["Implementation Cycle"]
+        B -->|"carve shippable slice"| C["Slice Spec"]
+        C --> D["Implement (1+ PRs)"]
+        D -->|"ship & carve next slice"| C
+    end
+
+    D -->|"learnings feed back"| B
+
+    style A fill:#4a9eff,color:#fff,stroke:#333
+    style B fill:#ff6b6b,color:#fff,stroke:#333
+    style C fill:#ffa94d,color:#fff,stroke:#333
+    style D fill:#51cf66,color:#fff,stroke:#333

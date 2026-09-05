@@ -1,0 +1,25 @@
+graph TD
+    subgraph spec["Living Spec Cycle"]
+        A["New / Updated<br/>Product Requirements<br/>(PRD, transcripts, Slack, etc.)"] -->|"LLM signal extraction"| B["Technical Spec<br/>(living document)"]
+    end
+
+    subgraph impl[" "]
+        B --> C[" "]
+        C --> D[" "]
+        D --> C
+    end
+
+    D --> B
+
+    style A fill:#4a9eff,color:#fff,stroke:#fff,stroke-width:3px
+    style B fill:#ff6b6b,color:#fff,stroke:#fff,stroke-width:3px
+    style C fill:#2a2a3e,color:#2a2a3e,stroke:#2a2a3e
+    style D fill:#2a2a3e,color:#2a2a3e,stroke:#2a2a3e
+    style spec fill:none,stroke:#fff,stroke-width:2px,color:#fff
+    style impl fill:none,stroke:#2a2a3e,stroke-width:1px,color:#2a2a3e
+
+    linkStyle 0 stroke:#fff,stroke-width:2px
+    linkStyle 1 stroke:#2a2a3e,stroke-width:1px
+    linkStyle 2 stroke:#2a2a3e,stroke-width:1px
+    linkStyle 3 stroke:#2a2a3e,stroke-width:1px
+    linkStyle 4 stroke:#2a2a3e,stroke-width:1px

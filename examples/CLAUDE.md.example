@@ -1,0 +1,51 @@
+# Project Configuration
+
+## Capability Bindings
+
+These bindings are available to all skills installed in this project.
+Skills reference capabilities by name (e.g., "use the **messaging** capability").
+These bindings tell the agent which concrete tools to use for each capability.
+
+### messaging
+- **blocking:** `mcp__your-messaging-tool__ask(question: <message>)` — use when a decision is needed, waits for reply
+- **info:** `mcp__your-messaging-tool__notify(message: <message>)` — status updates, one-way
+- **escalate:** `PushNotification(message: <message>)` — urgent, mobile push
+- **fallback:** print to terminal
+
+### test-runner
+- **ruby:** `docker compose exec web bundle exec rspec {files}`
+- **javascript:** `docker compose exec web yarn test`
+
+### lint-runner
+- **ruby:** `docker compose exec web rubocop {files}`
+- **javascript:** `docker compose exec web yarn eslint {files}`
+
+### ci-pipeline
+- **system:** GitHub Actions
+- **check status:** `gh run list --branch $(git branch --show-current) --limit 5`
+- **view logs:** `gh run view {run_id} --log-failed`
+- **re-run failed:** `gh run rerun {run_id} --failed`
+
+### issue-tracking
+- **tool:** Linear MCP (`mcp__linear__*`)
+- **conventions:** Ticket ID prefixes branch names (e.g., `abc-123-feature-name`)
+
+### code-hosting
+- **platform:** GitHub
+- **tool:** `gh` CLI
+- **pr conventions:** squash merge, request review from team lead
+
+### browser-testing
+- **tool:** Chrome DevTools MCP
+- **app url:** http://localhost:3000
+- **login:** see CLAUDE.local.md
+
+### session-logging
+- **tool:** `mcp__your-session-logger__append(entry: <text>)`
+- **format:** `[CATEGORY] Description`
+- **fallback:** append to `docs/session-log.md`
+
+### observability
+- **logs:** `docker compose logs -f web`
+- **console:** `docker compose exec web bundle exec rails console`
+- **database:** `docker compose exec web bundle exec rails dbconsole`
