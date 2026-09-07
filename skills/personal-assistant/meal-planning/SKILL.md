@@ -53,7 +53,7 @@ Recipes live in `<recipe-directory>/` as markdown files. The format is ADHD-frie
 **Source:** [where it came from — URL or book]
 **Serves:** X
 **Time:** X min prep, X min cook
-**Net carbs:** Xg per serving (if relevant — if the operator tracks them)
+**Net carbs:** Xg per serving (if the operator tracks them)
 **Good for:** [batch prep / solo cooking / project cooking / kid-friendly / etc]
 
 ---
@@ -117,12 +117,14 @@ When building a shopping list:
 
 ## Dietary Constraints
 
-The operator may have standing dietary constraints. Relevant to recipes and meal planning:
-- Net carbs per serving should be noted on recipes when applicable
-- Low-sugar/low-carb alternatives are preferred for baked goods (erythritol, allulose, monkfruit, almond flour)
-- High protein is a standing priority
-- "a trusted low-carb recipe source" (example.com) is a trusted recipe source for low-sugar versions
-- This is context, not a constraint that overrides desire. If the artifex wants to make something that isn't perfectly optimized, that's fine.
+The operator may have standing dietary constraints — carb limits, allergies, macro
+targets. Record the specifics in `resources/personal-skill.md`, not here, and read
+them from there. Where constraints exist:
+- Note the relevant macro per serving on recipes when applicable
+- Prefer substitutions that fit the constraint (e.g. alternative sweeteners or flours)
+- Keep any standing priority (protein, fiber, sodium) in view when suggesting meals
+- Treat constraints as context, not as a veto over what the operator actually wants.
+  If they want to make something that isn't perfectly optimized, that's fine.
 
 ## Existing Recipe Collection
 

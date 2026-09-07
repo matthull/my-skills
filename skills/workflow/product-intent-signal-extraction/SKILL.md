@@ -140,7 +140,7 @@ Extract:
 - Explicit constraints on the solution space
 - Things ruled out ("we're not doing X")
 - Known traps — things a reasonable person might pursue that would derail the core solution
-- Technical constraints expressed as product constraints ("must use customer DNS")
+- Technical constraints expressed as product constraints ("must send from the customer's own domain")
 
 Distinguish principal-stated constraints from stakeholder preferences.
 
@@ -277,6 +277,6 @@ When invoking, the orchestrator should give the subagent:
 2. The raw signal inputs (full text — do not pre-filter or summarize)
 3. Any known participant roles (if already established by the orchestrator)
 4. Whether this is a new extraction or a delta extraction (new signals against existing requirements)
-5. Any known strategic context (so the extractor can identify alignment signals)
+5. Any known strategic context — company objectives and product capabilities — so the extractor can identify alignment signals
 
 The skill returns the signal map with quality assessment. The orchestrator handles shaping it into product requirements.

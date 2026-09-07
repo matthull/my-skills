@@ -4,7 +4,8 @@
 
 After completing research, log to session:
 ```
-mcp__egregore-mcp__session_log_append(entries: "Research complete: {brief description}")
+Use the session-logging capability your environment provides, e.g.
+<logger>_session_log_append(entries: "Research complete: {brief description}")
 ```
 
 Example invocations:

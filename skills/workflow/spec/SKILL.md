@@ -597,7 +597,7 @@ When this feature is complete, review all task handoffs and extract:
 
 | Category | Action | Example |
 |----------|--------|---------|
-| **Routine technical** | No FYI needed | "Using existing ArticleList model" |
+| **Routine technical** | No FYI needed | "Using the existing ArticleList model" |
 | **Product-visible but low risk** | FYI, move on | "Emails will be plain text for MVP" |
 | **Risk or user impact** | FYI, await response | "Unpublished drafts could leak to end users" |
 | **Major scope/investment** | Discuss before proceeding | "Need to build new auth system" |
@@ -629,7 +629,7 @@ HTML from the start.
 
 **Public article lists:** Recipients can't log in, so the recommendation
 links need to be publicly accessible. This means we can only include
-*published* assets (otherwise unpublished drafts could leak to end users).
+*published* articles (otherwise unpublished drafts could leak to end users).
 This seems right but flagging since it's a data exposure consideration.
 Want to confirm this approach before we build it.
 ```
