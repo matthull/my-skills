@@ -1,3 +1,8 @@
+---
+name: resume-workflow
+description: Generate and manage resumes in JSON Resume format using the resumed CLI. Use when updating resume content, rendering to HTML or PDF, or trying different themes.
+---
+
 # Resume Workflow
 
 Generate and manage resumes using JSON Resume format.

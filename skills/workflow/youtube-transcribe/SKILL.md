@@ -1,4 +1,5 @@
 ---
+name: youtube-transcribe
 description: "Transcribe a YouTube video and do something with the transcript. Wraps youtube-to-signal. Use when a YouTube URL appears and the user wants to work with its content — summarize, analyze, extract quotes, review, or anything else."
 ---
 

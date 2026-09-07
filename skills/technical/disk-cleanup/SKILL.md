@@ -1,3 +1,8 @@
+---
+name: disk-cleanup
+description: Analyze disk usage and clean package and container caches on an Arch Linux workstation. Use when the user mentions disk space, storage, cleanup, or that a drive is full.
+---
+
 # /disk-cleanup
 
 Analyze disk usage and clean package/container caches on an Arch Linux workstation.

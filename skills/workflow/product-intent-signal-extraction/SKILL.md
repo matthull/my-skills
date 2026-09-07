@@ -1,5 +1,5 @@
 ---
-name: product-signal-extractor-base
+name: product-intent-signal-extraction
 description: Extract product intent signals from raw inputs (meeting transcripts, Slack threads, voice notes, brain dumps) into a structured signal map with per-source quality assessment. Designed to run as a subagent so extraction doesn't blow up the orchestrator's context. This skill should be used when pm-spec or any product management skill needs to process raw signals before shaping — never invoked directly by users.
 ---
 
@@ -263,7 +263,7 @@ The correct way to invoke this skill is via a subagent that reads the skill itse
 
 Orchestrator prompt to subagent:
 ```
-Read .claude/skills/product-signal-extractor-base/SKILL.md
+Read .claude/skills/product-intent-signal-extraction/SKILL.md
 and follow it to extract signals from: [file path or pasted content].
 Return the full signal map.
 ```

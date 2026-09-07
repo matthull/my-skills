@@ -18,9 +18,9 @@ See [docs/plugin-architecture.md](docs/plugin-architecture.md) for the full spec
 
 ## Skill Catalog
 
-44 skills, under `skills/<category>/<skill-name>/SKILL.md`.
+42 skills, under `skills/<category>/<skill-name>/SKILL.md`.
 
-### Technical — 21
+### Technical — 20
 
 Software development: languages, frameworks, databases, review, and tooling.
 
@@ -28,7 +28,6 @@ Software development: languages, frameworks, databases, review, and tooling.
 |---|---|
 | [`bash-scripts`](skills/technical/bash-scripts/) | Shell scripting safety patterns, bats-core TDD, Docker execution, idempotency |
 | [`code-review`](skills/technical/code-review/) | Structured review with parallel specialist agents, each in a fresh subagent context |
-| [`coding`](skills/technical/coding/) | Structural protocol for code changes — task-lead/implementer split, TDD cycle, verification floor |
 | [`davinci-resolve`](skills/technical/davinci-resolve/) | Edit OBS recordings into screencasts in DaVinci Resolve 20 — speed ramping, voiceover, captions, export |
 | [`disk-cleanup`](skills/technical/disk-cleanup/) | Analyze disk usage and clear package/container caches on an Arch Linux workstation |
 | [`fastmcp-python`](skills/technical/fastmcp-python/) | Build FastMCP/Python MCP servers — tool design, naming conventions, pytest, sidecar E2E testing |
@@ -48,7 +47,7 @@ Software development: languages, frameworks, databases, review, and tooling.
 | [`ui-state-management`](skills/technical/ui-state-management/) | Zustand + MMKV for ephemeral, local-only UI state that doesn't sync between devices |
 | [`waydroid-adb`](skills/technical/waydroid-adb/) | Drive the Waydroid Android emulator over ADB for Expo/React Native verification |
 
-### Workflow — 17
+### Workflow — 16
 
 How work gets planned, verified, researched, and driven — mostly language- and domain-agnostic.
 
@@ -68,7 +67,6 @@ How work gets planned, verified, researched, and driven — mostly language- and
 | [`skill-discovery`](skills/workflow/skill-discovery/) | Scan the installed skill catalog, match against the current task, load what's relevant |
 | [`slack-thread-triage`](skills/workflow/slack-thread-triage/) | Classify Slack threads by action type and tag them with emoji reactions, skipping ones already tagged |
 | [`spec`](skills/workflow/spec/) | Create or update feature specs with brownfield-first discovery and traceability tags |
-| [`threads`](skills/workflow/threads/) | Duplicate copy of [`collaboration/threads`](skills/collaboration/threads/) — pending dedupe |
 | [`tmux-sidecar`](skills/workflow/tmux-sidecar/) | Run REPLs, consoles, and log tails in a secondary tmux pane while driving from the main session |
 | [`youtube-transcribe`](skills/workflow/youtube-transcribe/) | Transcribe a YouTube video and act on the transcript — summarize, analyze, extract quotes |
 
@@ -94,4 +92,4 @@ Life admin.
 
 ### Adding a Skill
 
-Use [`skill-creator`](skills/technical/skill-creator/). Add the new skill to the table above and bump its category count.
+Use [`skill-creator`](skills/technical/skill-creator/). Add the new skill to the table above, bump its category count, and bump the total on the first line of this section.
