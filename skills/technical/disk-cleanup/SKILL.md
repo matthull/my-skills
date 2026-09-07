@@ -79,18 +79,21 @@ All of these are safe — they clear caches that will be rebuilt on demand. No d
 | Orphaned volumes | `docker volume prune -f` | Volumes not attached to any container |
 | Full cleanup | `docker system prune -a --volumes -f` | Nuclear option: images + containers + volumes + networks |
 
-### Example App Worktree Docker Cleanup
+### Worktree Docker Cleanup
 
-When removing a example-app worktree, always run the cleanup script first:
+If your project scopes Docker resources per worktree, tear those down before removing the
+worktree — otherwise `wtp remove` leaves orphaned containers and volumes behind:
 
 ```bash
 cd /path/to/worktree
-../../example-app/scripts/wtp-cleanup-env.sh
+../../<project>/scripts/wtp-cleanup-env.sh
 ```
 
-This tears down Docker containers and volumes for that worktree's project (`example-app-wt-{ID}`). Without it, `wtp remove` leaves orphaned Docker resources.
+A per-worktree Docker Compose project is typically named `<project>-wt-{ID}`. Check your
+project's cleanup script for the exact naming.
 
-**Known gap:** `wtp remove` does not call this script automatically. It must be run manually before worktree removal.
+**Known gap:** `wtp remove` does not call any such script automatically. It must be run
+manually before worktree removal.
 
 ### Browser/Test Tool Caches
 

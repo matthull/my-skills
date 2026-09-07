@@ -9,6 +9,9 @@ Standard citation format for maintaining source traceability across all document
 
 This skill defines the convention. It is referenced by other skills (pm-spec, research, project-management, etc.) that produce documents with source citations.
 
+> All examples below are illustrative. Names, URLs, and quotes are fabricated to
+> demonstrate the format — substitute your own sources.
+
 ---
 
 ## Footnote Format
@@ -17,22 +20,22 @@ Use markdown footnotes. Every significant claim gets a footnote.
 
 **Inline reference:**
 ```markdown
-Sales reps currently search the asset library manually after calls[^gong-workflow].
+Support agents currently search the knowledge base manually after each call[^call-workflow].
 ```
 
 **Footnote definition (at document end):**
 ```markdown
-[^gong-workflow]: Product planning meeting, 2026-01-15. J. Rivera (PM), A. Okonkwo (Eng). "After a support call ends, the agent has to go dig through the knowledge base themselves." [View Thread](https://example.slack.com/archives/C00000000/p0000000000000000)
+[^call-workflow]: Product planning meeting, 2026-01-15. J. Rivera (PM), A. Okonkwo (Eng). "After a call ends, the agent has to go dig through the knowledge base themselves." [View Thread](https://example.slack.com/archives/C00000000/p0000000000000000)
 ```
 
 ### Footnote Naming Convention
 
 Short, descriptive slugs: `[^org-topic]` or `[^topic-subtopic]`
 
-- `[^gong-workflow]` — the call platform workflow description
-- `[^rds-sla]` — RDS SLA terms
-- `[^ray-scope-v1]` — Ray's v1 scope decision
-- `[^eng-team-dns]` — DNS discussion in #eng-team
+- `[^call-workflow]` — post-call workflow description
+- `[^vendor-sla]` — vendor SLA terms
+- `[^rivera-scope-v1]` — Rivera's v1 scope decision
+- `[^platform-dns]` — DNS discussion in #platform
 
 ### Required Components
 
@@ -52,24 +55,24 @@ Not all components exist for every source. Include what you have.
 
 ### Web Sources
 ```markdown
-[^rds-sla]: Amazon RDS Service Level Agreement. 99.95% monthly uptime commitment for Multi-AZ deployments. [View Source](https://aws.amazon.com/rds/sla/) (accessed 2026-02-20)
+[^vendor-sla]: Vendor Service Level Agreement page. 99.9% uptime commitment, excluding scheduled maintenance. [View Source](https://www.example.com/legal/sla) (accessed 2026-02-20)
 ```
 Include access date for web sources — content changes.
 
 ### Slack Threads
 ```markdown
-[^eng-team-dns]: #eng-team thread, 2026-02-10. A. Okonkwo: "Should we make custom DNS a requirement so we don't need to worry about falling back?" [View Thread](https://example.slack.com/archives/C00000000/p1234567890)
+[^platform-dns]: #platform thread, 2026-02-10. A. Okonkwo: "Should we make custom DNS a requirement so we don't need to worry about falling back?" [View Thread](https://example.slack.com/archives/C00000000/p0000000000000000)
 ```
 
 ### Meetings
 ```markdown
-[^planning-scope]: Product planning meeting, 2026-01-15. Ray, Matt, Okonkwo. Ray: "Let's keep v1 to email only — Slack integration is v2."
+[^planning-scope]: Product planning meeting, 2026-01-15. Rivera, Okonkwo, Vance. Rivera: "Let's keep v1 to email only — chat integration is v2."
 ```
 No link unless a recording/transcript exists.
 
 ### Voice Notes
 ```markdown
-[^matt-voice-0218]: Voice note, 2026-02-18. J. Rivera. "The key insight is that agents don't want to search — they want articles surfaced for them."
+[^pm-voice-0218]: Voice note, 2026-02-18. J. Rivera. "The key insight is that agents don't want to search — they want articles surfaced for them."
 ```
 
 ### Documents
@@ -77,9 +80,9 @@ No link unless a recording/transcript exists.
 [^prd-v1]: Article Suggestion Engine PRD v1, 2026-01-12. Section: "No-Gos". [View](path/to/prd.md)
 ```
 
-### Linear Items
+### Issue Tracker Items
 ```markdown
-[^lin-update-feb13]: Linear project update, 2026-02-13. A. Okonkwo. "PR for using customer's DNS when available is up and approved." [View](https://linear.app/example/project/article-suggestion-engine/updates#project-update-0000)
+[^tracker-update-feb13]: Project update, 2026-02-13. A. Okonkwo. "PR for the per-tenant sending domain is up and approved." [View](https://linear.app/example/project/article-suggestion-engine/updates#project-update-0000)
 ```
 
 ---
@@ -91,16 +94,16 @@ No link unless a recording/transcript exists.
 ### Anti-pattern (Broken Chain)
 ```markdown
 ## Decision Document
-Sales reps search manually after calls (see research-findings.md).
+Support agents search manually after calls (see research-findings.md).
 ```
 Reader can't verify without finding the research document.
 
 ### Correct Pattern (Preserved Chain)
 ```markdown
 ## Decision Document
-Sales reps search manually after calls[^gong-workflow].
+Support agents search manually after calls[^call-workflow].
 
-[^gong-workflow]: Product planning meeting, 2026-01-15. J. Rivera. "After a support call ends, the agent has to go dig through the knowledge base themselves."
+[^call-workflow]: Product planning meeting, 2026-01-15. J. Rivera. "After a call ends, the agent has to go dig through the knowledge base themselves."
 ```
 The footnote is self-contained. Any document, anywhere, can be verified.
 

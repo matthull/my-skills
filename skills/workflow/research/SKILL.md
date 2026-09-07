@@ -77,16 +77,16 @@ Start each task prompt with a trigger phrase:
 ### Example Parallel Launch
 
 ```
-Task(description="Amazon RDS research",
+Task(description="RDS research",
      prompt="Investigate: Amazon RDS for PostgreSQL - backup retention, SLA terms, maintenance windows, and major-version upgrade path",
      subagent_type="research-expert")
 
-Task(description="Google Cloud SQL research",
+Task(description="Cloud SQL research",
      prompt="Investigate: Google Cloud SQL for PostgreSQL - backup retention, SLA terms, maintenance windows, and major-version upgrade path",
      subagent_type="research-expert")
 
-Task(description="TN state requirements",
-     prompt="Deep dive: PostgreSQL version support online school requirements and state recognition",
+Task(description="PG version policy",
+     prompt="Deep dive: PostgreSQL community major-version support policy and end-of-life dates",
      subagent_type="research-expert")
 ```
 
@@ -115,9 +115,9 @@ Amazon RDS publishes a 99.95% Multi-AZ availability SLA[^rds-sla] and retains au
 
 **Footnote definition (at document end):**
 ```markdown
-[^rds-sla]: Amazon RDS Service Level Agreement. 99.95% monthly uptime commitment for Multi-AZ deployments. [View Source](https://aws.amazon.com/rds/sla/) (accessed 2025-12-26)
+[^rds-sla]: Amazon RDS Service Level Agreement. 99.95% monthly uptime commitment for Multi-AZ deployments. [View Source](https://aws.amazon.com/rds/sla/) (accessed 2026-01-15)
 
-[^rds-backup]: Amazon RDS User Guide, "Working with backups". Automated backup retention configurable from 0 to 35 days. [View PDF](https://www.example.com/docs/pricing.pdf) (accessed 2025-12-26)
+[^rds-backup]: Amazon RDS User Guide, "Working with backups". Automated backup retention configurable from 0 to 35 days. [View Source](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_WorkingWithAutomatedBackups.html) (accessed 2026-01-15)
 ```
 
 ### Footnote Naming Convention
@@ -161,7 +161,7 @@ Flag source quality when relevant:
 ```markdown
 ## Decision Document
 
-Amazon RDS retains automated backups for up to 35 days (see research-findings.md).
+RDS retains automated backups for up to 35 days (see research-findings.md).
 ```
 
 This breaks the chain - a reader cannot verify the claim without finding the research document.
@@ -171,13 +171,13 @@ This breaks the chain - a reader cannot verify the claim without finding the res
 ```markdown
 ## Decision Document
 
-Amazon RDS retains automated backups for up to 35 days[^rds-backup].
+RDS retains automated backups for up to 35 days[^rds-backup].
 
 ---
 
 ## Footnotes
 
-[^rds-backup]: Amazon RDS User Guide, "Working with backups". Automated backup retention configurable from 0 to 35 days. [View PDF](https://www.example.com/docs/pricing.pdf) (accessed 2025-12-26)
+[^rds-backup]: Amazon RDS User Guide, "Working with backups". Automated backup retention configurable from 0 to 35 days. [View Source](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_WorkingWithAutomatedBackups.html) (accessed 2026-01-15)
 ```
 
 The footnote travels with the claim. Any document, anywhere, can be verified.
@@ -273,19 +273,19 @@ Before finalizing any research document:
 
 ## Example: Good Footnote Practices
 
-From `documents/research/online-school-comparison.md`:
+From `documents/research/managed-postgres-comparison.md`:
 
 **Inline:**
-> Both RDS and Cloud SQL track **supported PostgreSQL major versions**.[^pg-eol]
+> Both RDS and Cloud SQL drop support for a PostgreSQL major version once the community marks it **end-of-life**.[^pg-eol]
 
 **Definition:**
 ```markdown
-[^pg-eol]: PostgreSQL Global Development Group, "Versioning Policy" (updated 8/1/2025). Each major version is supported for five years after release. [View PDF](https://www.postgresql.org/support/versioning/)
+[^pg-eol]: PostgreSQL Global Development Group, "Versioning Policy" (accessed 2026-01-15). Each major version is supported for five years after its initial release. [View Source](https://www.postgresql.org/support/versioning/)
 ```
 
 This footnote includes:
 - Source organization (PostgreSQL Global Development Group)
 - Document title ("Versioning Policy")
-- Date (updated 8/1/2025)
-- What it says (Both schools are listed)
+- Date (accessed 2026-01-15)
+- What it says (five years of support per major version)
 - Clickable link with descriptive text

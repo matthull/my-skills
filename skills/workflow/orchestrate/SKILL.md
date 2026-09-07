@@ -43,7 +43,7 @@ The context separation is the point. Planning requires judgment, frameworks, and
 ### Task Dir Resolution
 
 Resolve `<task-dir>` once during triage and reference it everywhere after:
-1. Operator specifies explicitly (`/orchestrate --dir specs/article-suggestion-engine/tasks/abc-73/`)
+1. Operator specifies explicitly (`/orchestrate --dir specs/<project>/tasks/<ticket-slug>/`)
 2. Inferred from input (ticket number in the goal → `specs/<project>/tasks/<ticket-slug>/`)
 3. If neither works, **assume no existing plan** — proceed to Plan Mode (step 3). Ask the operator during triage.
 

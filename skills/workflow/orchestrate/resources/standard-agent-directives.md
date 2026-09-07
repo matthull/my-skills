@@ -50,7 +50,7 @@ Before running any Docker command, port-dependent operation, or browser navigati
 WORKTREE_ID=$(cat .worktree-id 2>/dev/null || echo "")
 ```
 
-If `.worktree-id` exists, you are in a worktree — ports, Docker project name, and service URLs differ from the main repo. See the "Worktree Environment Detection" section in CLAUDE.md for derivation rules. **Never** hardcode port 3000, 6006, or project name `example-app`.
+If `.worktree-id` exists, you are in a worktree — ports, Docker project name, and service URLs differ from the main repo. See the "Worktree Environment Detection" section in CLAUDE.md for derivation rules. **Never** hardcode a port (e.g. 3000, 6006) or the Docker project name.
 
 ## Diagnosis
 

@@ -32,7 +32,7 @@ A product intent signal is any raw artifact that expresses what someone wants, t
 | **Problem statement** | A pain point, need, or gap described by a user or stakeholder | "Support agents never know which help article to send after a ticket" |
 | **Goal / desired outcome** | What someone wants to achieve | "We want agents linking an article within 24h of a resolved ticket" |
 | **Constraint** | A real limitation on the solution space | "Must send from the customer's own mail domain" |
-| **Workflow signal** | How something works today or should work | "After a support call, the rep manually searches the library" |
+| **Workflow signal** | How something works today or should work | "After a support call, the agent manually searches the knowledge base" |
 | **No-go / exclusion** | Something explicitly ruled out | "We're not doing chat integration in v1" |
 | **Rabbit hole** | A tempting path that would derail the core solution | "Don't auto-generate new articles — just recommend existing ones" |
 | **NFR implication** | Non-functional requirement expressed as user expectation | "Agents need this before their next shift, so same-day delivery" |
