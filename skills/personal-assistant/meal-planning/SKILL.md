@@ -36,7 +36,7 @@ Cleaning the kitchen, shopping, prepping — these have real EF cost. Acknowledg
 
 ## Recipe Format
 
-Recipes live in `<recipe-directory>/` as markdown files. The format is ADHD-friendly — exhaustive step-by-step walkthrough of the entire cooking process. Nothing assumed, nothing to look up.
+Recipes live in the operator's recipe directory (configure it in `resources/personal-skill.md`; default `<repo>/recipes/`) as markdown files. The format is low-executive-function friendly — an exhaustive step-by-step walkthrough of the entire cooking process. Nothing assumed, nothing to look up.
 
 ### Format rules
 
@@ -128,7 +128,7 @@ them from there. Where constraints exist:
 
 ## Existing Recipe Collection
 
-Prior recipes exist in `<older-recipe-collection>/`. These are in an older format. Pull over and reformat as needed — don't migrate wholesale.
+The operator may have an older recipe collection in a different format; if so, record its path in `resources/personal-skill.md`. Pull entries over and reformat as needed — don't migrate wholesale.
 
 Key patterns from the old collection:
 - Sheet pan batch cooking (chicken thighs, sausages, beef chunks, vegetables)

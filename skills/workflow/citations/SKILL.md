@@ -34,7 +34,7 @@ Short, descriptive slugs: `[^org-topic]` or `[^topic-subtopic]`
 
 - `[^call-workflow]` — post-call workflow description
 - `[^vendor-sla]` — vendor SLA terms
-- `[^rivera-scope-v1]` — Rivera's v1 scope decision
+- `[^rivera-scope-v1]` — Rivera's v1 scope decision (see the Meetings example below)
 - `[^platform-dns]` — DNS discussion in #platform
 
 ### Required Components
