@@ -110,7 +110,7 @@ These patterns compose naturally. Manifold calcinatio produces findings from man
 
 ## Witnesses and Professional Proxy
 
-Calcinatio connects to witnesses through professional proxy. When the Magnum Opus defines a witness, the question is: *which professional discipline exists to serve this class of witness?* A UX designer can anticipate an end user's reaction better than an agent impersonating that user, because the designer has frameworks for reasoning about user needs that the end user doesn't have themselves. The proxy applies professional judgment on behalf of the witness — not impersonation, but the discipline whose purpose is to serve that witness's interests.
+Calcinatio connects to witnesses through professional proxy. When the Magnum Opus defines a witness, the question is: *which professional discipline exists to serve this class of witness?* A UX designer can anticipate an end user's reaction better than an agent impersonating that user, because the designer has frameworks for reasoning about user needs that the user doesn't have themselves. The proxy applies professional judgment on behalf of the witness — not impersonation, but the discipline whose purpose is to serve that witness's interests.
 
 When composing dialectical or manifold calcinatio, the professional proxy principle tells you what kind of specialist to fire. The witness defines the concern; the proxy identifies who would evaluate it best.
 
