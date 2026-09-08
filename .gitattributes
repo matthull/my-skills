@@ -1,0 +1,3 @@
+# The only CSS here is print/theme assets for the markdown-to-pdf skill.
+# Without this, Linguist reports the repo as a CSS project on its GitHub card.
+*.css linguist-detectable=false
